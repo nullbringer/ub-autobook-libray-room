@@ -17,8 +17,6 @@ def book_slot(driver, url, target_time, calender_id, next_slot=None):
 	target_td = driver.find_element_by_xpath('//td[@data-date="'+calender_id+'"]')
 	target_td.click()
 
-	driver.implicitly_wait(5)
-
 	available_rooms = driver.find_elements_by_xpath('//*[@id="eq-time-grid"]/div[2]/div/table/tbody/tr/td[3]/div/div/div/div[1]/div/table/tbody/tr')
 
 	# available_rooms = available_rooms_body.find_elements_by_xpath(".//*")
